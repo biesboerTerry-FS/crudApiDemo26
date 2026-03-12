@@ -1,0 +1,11 @@
+$kind: http-request
+url: https://crud-api-demo-9c7db11bf456.herokuapp.com/students/69b2299d8e94edfbadaa25e4
+method: PATCH
+body:
+  type: json
+  content: |-
+    {
+        "name": "Postman Seven",
+        "grade": "19"
+    }
+order: 1773285064077

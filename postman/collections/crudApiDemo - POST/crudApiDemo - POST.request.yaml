@@ -1,11 +1,11 @@
 $kind: http-request
 url: https://crud-api-demo-9c7db11bf456.herokuapp.com/students
-method: GET
+method: POST
 body:
   type: json
   content: |-
     {
-        "name": "Postman Four",
+        "name": "Postman Six",
         "grade": "19"
     }
-order: 3440898739581074
+order: 4465192681279784
