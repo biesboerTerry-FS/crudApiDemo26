@@ -1,0 +1,29 @@
+GET http://localhost:8000/students
+
+###
+
+GET http://localhost:8000/students/690ea3e16ce3d463665cf2d7
+
+###
+
+POST http://localhost:8000/students
+Content-Type: application/json  
+
+{
+    "name": "Terry Biesboer",
+    "grade": "12"
+}
+
+###
+
+DELETE http://localhost:8000/students/69b2126cb6e6674435f66301
+
+###
+
+PATCH  http://localhost:8000/students/69b2127eb6e6674435f66303
+Content-Type: application/json  
+
+{
+    "name": "Yoshi Biesboer",
+    "grade": "12"
+}
