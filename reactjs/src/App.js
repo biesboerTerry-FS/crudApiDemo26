@@ -8,7 +8,8 @@ function App() {
   
   const API_BASE =  process.env.NODE_ENV === 'development' 
   ? 'http://localhost:8000/api/v1'
-  : process.env.REACT_APP_BASE_URL;
+  // : process.env.REACT_APP_BASE_URL;
+  : "/api/v1"
 
 
   let ignore = false;
@@ -22,21 +23,36 @@ function App() {
     };
   }, []);
 
-  const getStudents = async () => {
-    try {
-     await fetch(`${API_BASE}/students`)
-        .then(response => response.json())
-        .then(data => {
-          console.log({data});
+  // const getStudents = async () => {
+  //   try {
+  //    await fetch(`${API_BASE}/students`)
+  //       .then(response => response.json())
+  //       .then(data => {
+  //         console.log({data});
           
-            setStudents(data);
-        });
-    } catch (error) {
-      setError(error.message || 'Unexpected error.')
-    } finally {
-      setLoading(false);
+  //           setStudents(data);
+  //       });
+  //   } catch (error) {
+  //     setError(error.message || 'Unexpected error.')
+  //   } finally {
+  //     setLoading(false);
+  //   }
+  // };
+const getStudents = async () => {
+  setLoading(true);
+  try {
+    const response = await fetch(`${API_BASE}/students`);
+    const data = await response.json();
+    if (!ignore) {
+      setStudents(data);
     }
-  };
+  } catch (error) {
+    setError(error.message || 'Unexpected error.');
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   return (
     <div className="App">
