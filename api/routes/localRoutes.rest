@@ -2,7 +2,7 @@ GET http://localhost:8000/students
 
 ###
 
-GET http://localhost:8000/students/690ea3e16ce3d463665cf2d7
+GET http://localhost:8000/students/69b2299d8e94edfbadaa25e4
 
 ###
 
@@ -10,17 +10,17 @@ POST http://localhost:8000/students
 Content-Type: application/json  
 
 {
-    "name": "Terry Biesboer",
+    "name": "Postman Test",
     "grade": "12"
 }
 
 ###
 
-DELETE http://localhost:8000/students/69b2126cb6e6674435f66301
+DELETE http://localhost:8000/students/69b363a45518254529b48886
 
 ###
 
-PATCH  http://localhost:8000/students/69b2127eb6e6674435f66303
+PATCH  http://localhost:8000/students/69b2299d8e94edfbadaa25e4
 Content-Type: application/json  
 
 {
