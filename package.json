@@ -4,6 +4,7 @@
     "engines": {
         "node": "25.8.0"
     },
+    "main": "index.js",
     "scripts": {
         "install-reactjs": "npm install --prefix reactjs",
         "install-api": "npm install --prefix api",

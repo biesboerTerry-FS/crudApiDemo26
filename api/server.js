@@ -22,6 +22,7 @@ app.use(express.json());
 app.use('/api/v1/students', studentRouter);
 
 app.use(express.static(path.join(__dirname, '../reactjs/build')));
+
 app.get(/^(?!\/api).+/, (request, response) => {
     response.sendFile(path.join(__dirname, '../reactjs/build', 'index.html'));
 });
